@@ -1,0 +1,163 @@
+/* General Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d5ab6b;
+}
+
+.product-section {
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* Space between items */
+  margin-top: 20px;
+}
+.product-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-left: 60px;
+}
+
+.product-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #e67e22;
+  margin: 10px 0;
+}
+/* General Button Style */
+.contact-btn {
+  display: inline-block;
+  background-color: #b08d57; /* Button background color */
+  color: #fff; /* Text color */
+  padding: 0.8rem 2rem; /* Padding around text */
+  font-size: 1rem; /* Font size */
+  font-weight: bold; /* Font weight */
+  text-decoration: none; /* Remove underline */
+  border-radius: 25px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+  text-align: center; /* Center text */
+}
+
+/* Hover Effect */
+.contact-btn:hover {
+  background-color: #a37d4a; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly grow the button */
+}
+
+/* Focus Effect */
+.contact-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(176, 141, 87, 0.5); /* Focus ring */
+}
+
+/* Active Effect */
+.contact-btn:active {
+  background-color: #8a5e35; /* Even darker shade when clicked */
+}
+
+/* ========== Responsive Media Queries for Product Section ========== */
+
+/* Tablets and smaller desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
+  }
+
+  .product-item {
+    margin-left: 0;
+  }
+}
+
+/* Tablets and large phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .product-item {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-description {
+    font-size: 0.95rem;
+  }
+
+  .product-item {
+    padding: 15px;
+  }
+
+  .product-title {
+    font-size: 1rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+  }
+
+  .contact-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,120 @@
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d5ab6b;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+/* General Button Style */
+.contact-btn {
+  display: inline-block;
+  background-color: #b08d57; /* Button background color */
+  color: #fff; /* Text color */
+  padding: 0.8rem 2rem; /* Padding around text */
+  font-size: 1rem; /* Font size */
+  font-weight: bold; /* Font weight */
+  text-decoration: none; /* Remove underline */
+  border-radius: 25px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+  text-align: center; /* Center text */
+}
+
+/* Hover Effect */
+.contact-btn:hover {
+  background-color: #a37d4a; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly grow the button */
+}
+
+/* Focus Effect */
+.contact-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(176, 141, 87, 0.5); /* Focus ring */
+}
+
+.product-section {
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+/* Active Effect */
+.contact-btn:active {
+  background-color: #8a5e35; /* Even darker shade when clicked */
+}
+
+/* Product Grid */
+.product-grid {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 15px; /* Space between items */
+  margin-top: 20px;
+}
+
+
+.product-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-left: 60px;
+}
+
+
+/* ========== Responsive Media Queries ========== */
+
+/* Medium screens (tablets and small laptops) */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
+  }
+
+  .product-item {
+    margin-left: 0;
+  }
+}
+
+/* Small screens (phones and small tablets) */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .product-item {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.2rem;
+  }
+
+  .contact-btn {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .product-item {
+    padding: 1rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}

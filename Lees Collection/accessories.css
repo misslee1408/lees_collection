@@ -1,0 +1,110 @@
+.contact-button {
+  background-color: #b08d57; /* Button color */
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+}
+
+.contact-button:hover {
+  background-color: #a37d4a;
+  transform: scale(1.05);
+}
+
+.contact-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(176, 141, 87, 0.5);
+}
+
+.contact-button:active {
+  background-color: #8a5e35;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+/* Product Grid */
+.product-grid {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 15px; /* Space between items */
+  margin-top: 20px;
+}
+
+.product-section {
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+}
+.product-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-left: 60px;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d5ab6b;
+}
+/* ========== Responsive Media Queries ========== */
+
+/* Tablets and medium screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
+  }
+
+  .product-item {
+    margin-left: 0;
+  }
+}
+
+/* Small tablets and large phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .product-item {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contact-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .product-item {
+    padding: 15px;
+  }
+
+  .contact-button {
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
